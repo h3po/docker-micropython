@@ -1,0 +1,14 @@
+diff --git a/ports/unix/mpconfigport.mk b/ports/unix/mpconfigport.mk
+index f0aa955c0..51d462142 100644
+--- a/ports/unix/mpconfigport.mk
++++ b/ports/unix/mpconfigport.mk
+@@ -9,7 +9,7 @@ MICROPY_FORCE_32BIT = 0
+ MICROPY_USE_READLINE = 1
+ 
+ # btree module using Berkeley DB 1.xx
+-MICROPY_PY_BTREE = 1
++MICROPY_PY_BTREE = 0
+ 
+ # _thread module using pthreads
+ MICROPY_PY_THREAD = 1
+
