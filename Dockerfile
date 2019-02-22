@@ -21,11 +21,4 @@ FROM alpine
 
 COPY --from=build /tmp/micropython/ports/unix/micropython /bin/micropython
 
-RUN \
-  apk --update add --no-cache mbedtls libffi && \
-  for l in \             
-    array cmath gc math sys binascii collections errno hashlib heapq io json os re \
-    select socket ssl struct time zlib framebuf machine uctypes ; do \
-      /bin/micropython -m upip install micropython-$l ; done
-
 ENTRYPOINT /bin/micropython
