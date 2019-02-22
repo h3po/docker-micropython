@@ -21,4 +21,7 @@ FROM alpine
 
 COPY --from=build /tmp/micropython/ports/unix/micropython /bin/micropython
 
+RUN \
+  apk --update add --no-cache libffi mbedtls
+
 ENTRYPOINT /bin/micropython
