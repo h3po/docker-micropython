@@ -2,10 +2,10 @@ FROM alpine AS build
 
 RUN apk --update add --no-cache python3 build-base libffi-dev mbedtls-dev
 
-ARG MPY_REPO=pfalcon
+ARG MPY_REPO=pfalcon/micropython
 ARG MPY_VERSION=pfalcon
 
-ADD https://github.com/$MPY_REPO/micropython/archive/$MPY_VERSION.tar.gz /tmp/micropython.tar.gz
+ADD https://github.com/$MPY_REPO/archive/$MPY_VERSION.tar.gz /tmp/micropython.tar.gz
 
 COPY ./patches /tmp/patches
 
